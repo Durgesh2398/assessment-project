@@ -1,4 +1,4 @@
-# classassessment
+# assessment-project
 https://durgesh2398.github.io/assessment-project/
 
 
