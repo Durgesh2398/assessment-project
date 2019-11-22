@@ -1,5 +1,5 @@
 # classassessment
-https://durgesh2398.github.io/classassessment/
+https://durgesh2398.github.io/assessment-project/
 
 
 # Api Used
@@ -20,4 +20,4 @@ https://openweathermap.org/current
 
 
 # url
-https://durgesh2398.github.io/classassessment/
+https://durgesh2398.github.io/assessment-project/
