@@ -14,25 +14,24 @@ function news(){
             let output= "";
             let latestNews =jsonresult.articles;
             for (var i in latestNews) {
-                output += `<div class="col l4 m6 s12">
-                            <div class="card medium hoverable">
-                                <div class="card-image">
+                output += `<div style= "box-sizing: content-box;  padding: 30px;  border: 10px solid blue;">
+                            <div >
+                                <div >
                                     <img src="${latestNews[i].urlToImage}" class="responsive-img" style="width:300px;height:300px;" alt="${latestNews[i].title}">
                                 </div>
-                                <div class="card-content">
-                                    <span class="card-title activator"><i class="material-icons right">more_vert</i></span>
-                                    <h6 class="truncate">Title: <a href="${latestNews[i].url}" title="${latestNews[i].title}">${latestNews[i].title}</a></h6>
+                                <div >
+                                    <span><i class="material-icons right">more_vert</i></span>
+                                    <h6 >Title: <a href="${latestNews[i].url}" title="${latestNews[i].title}">${latestNews[i].title}</a></h6>
                                     <p><b>Author</b>: ${latestNews[i].author} </p>
                                     <p><b>News source</b>: ${latestNews[i].source.name} </p>
                                     <p><b>Published</b>: ${latestNews[i].publishedAt} </p>
                                 </div>
 
-                                <div class="card-reveal">
-                                    <span class="card-title"><i class="material-icons right">close</i></span>
+                                <div>
                                     <p><b>Description</b>: ${latestNews[i].description}</p>
                                 </div>
 
-                                <div class="card-action">
+                                <div >
                                     <a href="${latestNews[i].url}" target="_blank" class="btn">Read More</a>
                                 </div>
                             </div>
@@ -60,25 +59,24 @@ function news1(){
             let output= "";
             let latestNewss =jsonresultt.articles;
             for (var i in latestNewss) {
-                output += `<div class="col l4 m6 s12">
-                            <div class="card medium hoverable">
-                                <div class="card-image">
+                output += `<div style= "box-sizing: content-box;  padding: 30px;  border: 10px solid blue;">
+                            <div >
+                                <div >
                                     <img src="${latestNewss[i].urlToImage}" class="responsive-img" style="width:300px;height:300px;" alt="${latestNewss[i].title}">
                                 </div>
-                                <div class="card-content">
-                                    <span class="card-title activator"><i class="material-icons right">more_vert</i></span>
-                                    <h6 class="truncate">Title: <a href="${latestNewss[i].url}" title="${latestNewss[i].title}">${latestNewss[i].title}</a></h6>
+                                <div >
+                                    <span ><i class="material-icons right">more_vert</i></span>
+                                    <h6 >Title: <a href="${latestNewss[i].url}" title="${latestNewss[i].title}">${latestNewss[i].title}</a></h6>
                                     <p><b>Author</b>: ${latestNewss[i].author} </p>
                                     <p><b>News source</b>: ${latestNewss[i].source.name} </p>
                                     <p><b>Published</b>: ${latestNewss[i].publishedAt} </p>
                                 </div>
 
-                                <div class="card-reveal">
-                                    <span class="card-title"><i class="material-icons right">close</i></span>
+                                <div >
                                     <p><b>Description</b>: ${latestNewss[i].description}</p>
                                 </div>
 
-                                <div class="card-action">
+                                <div >
                                     <a href="${latestNewss[i].url}" target="_blank" class="btn">Read More</a>
                                 </div>
                             </div>
@@ -106,25 +104,24 @@ function news2(){
             let output= "";
             let latestNew =jsonresul.articles;
             for (var i in latestNew) {
-                output += `<div class="col l4 m6 s12">
-                            <div class="card medium hoverable">
-                                <div class="card-image">
+                output += `<div style="box-sizing: content-box;  padding: 30px;  border: 10px solid blue;">
+                            <div>
+                                <div >
                                     <img src="${latestNew[i].urlToImage}" class="responsive-img" style="width:300px;height:300px;" alt="${latestNew[i].title}">
                                 </div>
-                                <div class="card-content">
-                                    <span class="card-title activator"><i class="material-icons right">more_vert</i></span>
-                                    <h6 class="truncate">Title: <a href="${latestNew[i].url}" title="${latestNew[i].title}">${latestNew[i].title}</a></h6>
+                                <div >
+                                    <span ><i class="material-icons right">more_vert</i></span>
+                                    <h6 >Title: <a href="${latestNew[i].url}" title="${latestNew[i].title}">${latestNew[i].title}</a></h6>
                                     <p><b>Author</b>: ${latestNew[i].author} </p>
                                     <p><b>News source</b>: ${latestNew[i].source.name} </p>
                                     <p><b>Published</b>: ${latestNew[i].publishedAt} </p>
                                 </div>
 
-                                <div class="card-reveal">
-                                    <span class="card-title"><i class="material-icons right">close</i></span>
+                                <div >
                                     <p><b>Description</b>: ${latestNew[i].description}</p>
                                 </div>
 
-                                <div class="card-action">
+                                <div >
                                     <a href="${latestNew[i].url}" target="_blank" class="btn">Read More</a>
                                 </div>
                             </div>
@@ -136,3 +133,50 @@ function news2(){
         }
     }
 }
+function news3(){
+    
+    var url = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=bdceeaeb320c4e2bafb98c5bad6375ad";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            var articles = this.responseText;
+            //console.log(result);
+            var jsonr = JSON.parse(articles);
+            console.log(jsonr);
+            //let list = document.getElementById('list');
+            let output= "";
+            let latest =jsonr.articles;
+            for (var i in latest) {
+                output += `
+                <div style= "box-sizing: content-box;  padding: 30px;  border: 10px solid blue;">
+                            
+                            <div  >
+                                <div >
+                                    <img src="${latest[i].urlToImage}" class="responsive-img" style="width:300px;height:300px;" alt="${latest[i].title}">
+                                </div>
+                                <div class="card-content">
+                                    <span ><i class="material-icons right">more_vert</i></span>
+                                    <h6 >Title: <a href="${latest[i].url}" title="${latest[i].title}">${latest[i].title}</a></h6>
+                                    <p><b>Author</b>: ${latest[i].author} </p>
+                                    <p><b>News source</b>: ${latest[i].source.name} </p>
+                                    <p><b>Published</b>: ${latest[i].publishedAt} </p>
+                                </div>
+
+                                <div >
+                                    <p><b>Description</b>: ${latest[i].description}</p>
+                                </div>
+
+                                <div >
+                                    <a href="${latest[i].url}" target="_blank" class="btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>`;
+            }
+            if (output !== "") {
+                $("#newsResults").html(output);
+            }
+        }
+    }
+}    

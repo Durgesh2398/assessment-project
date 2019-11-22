@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>weather</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
     <style>
     #profile{
         position: fixed;
+    }
+    *{
+        background-color: aqua;
     }
     input[type=text] {
     width: 80%;
@@ -16,28 +20,41 @@
     margin: 5px 5px;
     box-sizing: border-box;  
 }
+    #heading{
+        font-family: 'Calistoga', cursive;
+    }
     </style>
 </head>
 <body>
+    <div class="mb-5"style="background-color: aqua;">
     <a href="resume.html"><button id="profile"  class="btn btn-warning">My Profile</button></a>
     <center>
         <a href="index.html"><button type="button" class="btn btn-primary">Find News</button></a>
         <!--<a href="funny.html"><button class="btn btn-danger">Funny Images</button></a>-->
-        <a href="weather.html"><button class="btn btn-success m-5">Weather</button></a>
+        
     </center>
         <div class="container m-5">
+            <div id="heading">
+                <h1>
+                    <center>
+                        Open weather forecast
+                    </center>
+                </h1>
+            </div>
         <div class="container m-5">
-            <input type="text" class="m-5" name ="forcast" id="forcast" placeholder="enter city to get weather">
+            <input type="text" style="background-color: white;"class="m-1" name ="forcast" id="forcast" placeholder="enter city to get weather">
             <button class="btn btn-danger" onclick="weather()">show</button>
         </div>
     </div>
-    <div class="container m-10">
-        <div id="fetched"></div>
+    <div class="container m-5">
+        <div id="fetched" class="p-5"></div>
     </div>
-    
+</div> 
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
     <script src="weather.js"></script>
+
 </body>
 </html>
