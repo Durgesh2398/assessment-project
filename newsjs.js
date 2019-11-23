@@ -45,7 +45,7 @@ function news(){
 }    
 function news1(){
     
-    var url = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-10-22&sortBy=publishedAt&apiKey=bdceeaeb320c4e2bafb98c5bad6375ad";
+    var url = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-10-23&sortBy=publishedAt&apiKey=bdceeaeb320c4e2bafb98c5bad6375ad";
     var xtpp = new XMLHttpRequest();
     xtpp.open("GET", url, true);
     xtpp.send();
